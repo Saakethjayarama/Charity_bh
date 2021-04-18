@@ -158,7 +158,7 @@ body {
 --------------------------------------------------------------------- */
 
 h1, h2, h3, h4, h5, h6 {
-   color: #313131;
+   color: #ffffff;
 	font-family: 'opensans-bold', sans-serif;
    font-weight: normal;
 }
@@ -464,7 +464,7 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
    font: 16px/30px 'opensans-bold', sans-serif;
-   background: #11ABB0;
+   background: #000;
    display: inline-block;
 	text-decoration: none;
    letter-spacing: 0;
@@ -492,7 +492,7 @@ button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover {
-   background: #3d4145;
+   background: #ffffff;
    color: #fff;
 }
 
@@ -501,7 +501,7 @@ button:active,
 input[type="submit"]:active,
 input[type="reset"]:active,
 input[type="button"]:active {
-   background: #3d4145;
+   background: #ffffff;
    color: #fff;
 }
 
@@ -532,6 +532,7 @@ fieldset { margin-bottom: 24px; }
 input[type="text"],
 input[type="password"],
 input[type="email"],
+input[type="file"],
 textarea,
 select {
    display: block;
@@ -540,12 +541,12 @@ select {
    border: 0;
    outline: none;
    vertical-align: middle;
-   min-width: 225px;
+   min-width: 1005px;
 	max-width: 100%;
    font-size: 15px;
    line-height: 24px;
-	color: #647373;
-	background: #D3D9D9;
+	color: #ffffff;
+	background: #ffffff;
 
 }
 
@@ -557,8 +558,8 @@ input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus,
 textarea:focus {
-   color: #B3B7BC;
-	background-color: #3d4145;
+   color: #ffffff;
+	background-color: #ffffff;
 }
 
 textarea { min-height: 220px; }

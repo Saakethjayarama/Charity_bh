@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Hand from "../hand.jpg";
 export default class Header extends Component {
   render() {
     let resumeData = this.props.resumeData;
@@ -19,16 +20,24 @@ export default class Header extends Component {
                {/* <li><a className="smoothscroll" href="#portfolio">Works</a></li>
                <li><a className="smoothscroll" href="#testimonials">Testimonials</a></li> */}
                <li><a className="smoothscroll" href="#contact">Enroll</a></li>
+               <li><a className="smoothscroll" href="#admin">Admin</a></li>
             </ul>
          </nav>
 
          <div className="row banner">
-            <div className="banner-text">
-               <div className="responsive-headline sameLine"><h1>Help a  <div className="causeColor">cause.</div></h1></div>
+         
+            <div className="banner-text ">
+            <div className="responsive-headline "><h1>Help a  <div className="causeColor">cause.</div></h1></div>
+              <div className="sameLine">
+              
+               <img src={Hand } className="handImg" />
+               </div>
                <h3 style={{color:'#fff', fontFamily:'sans-serif '}}> Donate your web traffic for the good.
                </h3>
+              
                <hr/>
-               {/* <ul className="social">
+               
+                  {/* <ul className="social">
                   {
                     resumeData.socialLinks && resumeData.socialLinks.map(item =>{
                       return(

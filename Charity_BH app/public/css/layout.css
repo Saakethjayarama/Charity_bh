@@ -33,7 +33,7 @@ header {
    height: 800px;
    min-height: 500px;
    width: 100%;
-   background-color: #0D0D0D;
+   background-color: #000;
    /* background: #161415 url(../images/header-background.jpg) no-repeat top center; */
    background-size: cover !important;
 	-webkit-background-size: cover !important;
@@ -60,11 +60,23 @@ header .causeColor{
    color: #C15164;
 
 }
+header .handImg{
+   max-height: 400px;
+   object-fit: contain;
+   margin-left: 800px;
+   margin-top: -300px;
+}
 header .sameLine{
-   clear: both;
-   display: inline-block;
-   overflow: hidden;
-   white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+header .aboutImg{
+   max-height: 400px;
+   max-width: 500px;
+   object-fit: contain;
+   margin-left: 0px;
+   margin-top: -250px;
 }
 header .banner-text { width: 100%; }
 header .banner-text h1 {
@@ -197,7 +209,7 @@ ul#nav li.current a { color: #F06000; }
 /* ------------------------------------------------------------------ */
 
 #about {
-   background: #2B2B2B;
+   background: #000;
    padding-top: 96px;
    padding-bottom: 66px;
    overflow: hidden;
