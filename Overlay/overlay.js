@@ -98,7 +98,7 @@ window.onload = async function () {
           </div>
           <div class="buttons">
             <button onclick="cancel()">Close</button>
-            <button onclick="donate('${website}')">Donate $</button>
+            <button onclick="donate('${website}')">Donate </button>
           </div>
         </div>
       </div>

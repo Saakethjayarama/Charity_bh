@@ -1,39 +1,30 @@
 import React, { Component } from "react";
-import Art from "../Screencropped.png";
-export default class About extends Component {
+import Art from "../Qp.png";
+export default class HowToUse extends Component {
   render() {
     let resumeData = this.props.resumeData;
     return (
       <React.Fragment>
-        <header id="about">
+        <header id="How">
           <div className="row banner">
             <br></br>
             <br></br>
             <br></br>
-            <img src={Art} className="aboutImg" />
+            <img src={Art}  className="howImg" />
             <div className="banner-text ">
               <div className="responsive-headline ">
                 <h1>
-                  Donate <div className="causeColor">web traffic.</div>
+                   <div className="causeColor">How to use?</div>
                 </h1>
               </div>
               <div className="sameLine"></div>
-              <h3 style={{ color: "#fff", fontFamily: "sans-serif " }}>
-                {" "}
-               We at CharityAF offer charity mediator service, that works on the graciousness of high
-                traffic website owners. CharityAF puts forward pitches for
-                donations to various charities and causes, on your website upon
-                consent, to make use of the web traffic for raising money.
-                Enroll today to help a cause.
-                <span>
-                On any high traffic website, CharityAF plugin provides a layer over the landing page, showcasing various charities for the valued customer to donate to. 
-                </span>
-              </h3>
-
+             <h2>1. Have a running website built using html.</h2>
+             <h2>2. Inject the <a href="https://github.com/Saakethjayarama/Charity_bh">plugin</a> onto your home page.</h2>
+             <h2>3. Voila! You're done. </h2>
               <br></br>
-              <h3>
+              <h3>Good karma is that easy! </h3>
+              
 
-              </h3>
               <hr />
 
               {/* <ul className="social">
@@ -51,7 +42,6 @@ export default class About extends Component {
             </div>
           </div>
 
-          
         </header>
       </React.Fragment>
     );

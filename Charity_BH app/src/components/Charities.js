@@ -29,7 +29,7 @@ export default class Resume extends Component {
       <section id="resume">
         {this.state.data.map((charity, index) => {
           const { name, description, location, website, url } = charity;
-          return (
+          return (  
             <Charity
               name={name}
               description={description}
@@ -50,7 +50,7 @@ class Charity extends Component {
     return (
       <div>
         <div className="row education">
-          <div className="three columns header-col">
+          <div className="header-col">
             <h1>
               <span style={{ color: "black" }}>{name}</span>
             </h1>
@@ -70,7 +70,7 @@ class Charity extends Component {
                 }}
               >
                 {" "}
-                Goto charity website{" "}
+                Link to charity website{" "}
               </button>
             </div>
           </div>
@@ -79,3 +79,6 @@ class Charity extends Component {
     );
   }
 }
+
+
+ 

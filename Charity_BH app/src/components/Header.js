@@ -3,7 +3,7 @@ import Hand from "../hand.jpg";
 export default class Header extends Component {
   render() {
     let resumeData = this.props.resumeData;
-    let url= "https://www.google.com";
+    let url= "https://github.com/Saakethjayarama/Charity_bh";
     return (
       <React.Fragment>
         <header id="home">
@@ -18,7 +18,7 @@ export default class Header extends Component {
             <ul id="nav" className="nav">
               <li className="current">
                 <a className="current" href="#home">
-                  Charity BH
+                  CharityAF
                 </a>
               </li>
               <li className="smoothscroll">

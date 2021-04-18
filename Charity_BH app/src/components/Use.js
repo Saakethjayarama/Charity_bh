@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import Art from "../Screencropped.png";
-export default class About extends Component {
+import Art from "../Charity.png";
+export default class Use extends Component {
   render() {
     let resumeData = this.props.resumeData;
     return (
       <React.Fragment>
-        <header id="about">
+        <header id="use">
           <div className="row banner">
             <br></br>
             <br></br>
@@ -14,26 +14,17 @@ export default class About extends Component {
             <div className="banner-text ">
               <div className="responsive-headline ">
                 <h1>
-                  Donate <div className="causeColor">web traffic.</div>
+                   <div className="causeColor"> Who is it for?</div>
                 </h1>
               </div>
               <div className="sameLine"></div>
-              <h3 style={{ color: "#fff", fontFamily: "sans-serif " }}>
-                {" "}
-               We at CharityAF offer charity mediator service, that works on the graciousness of high
-                traffic website owners. CharityAF puts forward pitches for
-                donations to various charities and causes, on your website upon
-                consent, to make use of the web traffic for raising money.
-                Enroll today to help a cause.
-                <span>
-                On any high traffic website, CharityAF plugin provides a layer over the landing page, showcasing various charities for the valued customer to donate to. 
-                </span>
-              </h3>
-
+             <h2>1. Bloggers</h2>
+             <h2>2. E-Commerce site owners</h2>
+             <h2>3. Influencers</h2>
               <br></br>
-              <h3>
+              <h3>Integrate CharityAF on your site for good karma. </h3>
+              
 
-              </h3>
               <hr />
 
               {/* <ul className="social">
@@ -51,7 +42,6 @@ export default class About extends Component {
             </div>
           </div>
 
-          
         </header>
       </React.Fragment>
     );
