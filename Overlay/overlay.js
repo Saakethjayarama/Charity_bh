@@ -24,7 +24,8 @@ attachScript("https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js");
 window.onload = async function () {
   window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
-  const cssLink = "http://localhost:3000/overlay.css";
+  const cssLink =
+    "https://firebasestorage.googleapis.com/v0/b/charitybh-dc293.appspot.com/o/files%2Foverlay.css?alt=media&token=38c9c105-5b0c-429e-a3ec-73fb41bbcc7a";
   const head = document.getElementsByTagName("head")[0];
 
   const link = document.createElement("link");
