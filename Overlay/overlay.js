@@ -1,7 +1,8 @@
 // Append css file to head content
 
-function donate() {
-  console.log("donate");
+function donate(url) {
+  cancel();
+  window.open(url);
 }
 
 function cancel() {
@@ -9,7 +10,18 @@ function cancel() {
   document.getElementsByTagName("body")[0].style.overflow = "scroll";
 }
 
-window.onload = function () {
+function attachScript(src) {
+  const head = document.getElementsByTagName("head")[0];
+
+  const script = document.createElement("script");
+  script.src = src;
+  head.appendChild(script);
+}
+
+attachScript("https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js");
+attachScript("https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js");
+
+window.onload = async function () {
   window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
   const cssLink = "http://localhost:3000/overlay.css";
@@ -22,8 +34,36 @@ window.onload = function () {
   link.media = "all";
   head.appendChild(link);
 
-  const body = document.getElementsByTagName("body")[0];
-  body.innerHTML += `
+  const config = {
+    apiKey: "AIzaSyCAEDC0IPBG6wq2OXUHxR6gnDh0SvXDlHI",
+    authDomain: "charitybh-dc293.firebaseapp.com",
+    projectId: "charitybh-dc293",
+    storageBucket: "charitybh-dc293.appspot.com",
+    messagingSenderId: "620921666149",
+    appId: "1:620921666149:web:8546090aad1c06890ae48c",
+    measurementId: "G-ZVCBNERB1T",
+  };
+  const firebaseApp = firebase.initializeApp(config);
+  const fstore = firebaseApp.firestore();
+
+  const ids = [];
+  const idsSnapshot = await fstore.collection("charities_ids").get();
+  idsSnapshot.docs.forEach((id) => {
+    ids.push(id.id);
+  });
+
+  randomIndex = Math.floor(Math.random() * (ids.length - 1 - 0 + 1) + 0);
+  id = ids[randomIndex];
+
+  fstore
+    .collection("charities")
+    .doc(id)
+    .get()
+    .then((snapshot) => {
+      const { url, name, description, website } = snapshot.data();
+
+      const body = document.getElementsByTagName("body")[0];
+      body.innerHTML += `
   <div id="charity_bh">
       <div id="cross_bh" onclick="cancel()">
         <svg
@@ -42,26 +82,26 @@ window.onload = function () {
       </div>
       <div id="content_bh">
         <img
-          src="https://firebasestorage.googleapis.com/v0/b/sant-ea20f.appspot.com/o/docs%2FHands.png?alt=media&token=dd70c33b-5cf7-4d2d-b0df-a3c266ab1678"
+          src="${url}"
           width="150"
           height="150"
         />
         <div id="container_bh">
           <div id="title_bh">
-            <h1>Haakathon Charity</h1>
+            <h1>${name}</h1>
           </div>
           <div id="desc_bh">
             <h3>
-              Donate to poor and single techies in bangalore by pressing donate
-              button
+              ${description}
             </h3>
           </div>
           <div class="buttons">
             <button onclick="cancel()">Close</button>
-            <button onclick="donate()">Donate $</button>
+            <button onclick="donate('${website}')">Donate $</button>
           </div>
         </div>
       </div>
     </div>
   `;
+    });
 };

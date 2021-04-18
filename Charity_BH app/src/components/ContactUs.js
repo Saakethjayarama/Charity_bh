@@ -38,7 +38,7 @@ export default class ContactUs extends Component {
     const { name, location, email, description, website } = this.state;
     fstore
       .collection("charities")
-      .doc()
+      .doc(id)
       .set({
         name,
         location,
