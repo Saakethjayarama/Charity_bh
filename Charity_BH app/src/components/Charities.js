@@ -1,12 +1,44 @@
 import React, { Component } from "react";
+import { fstore } from "../firebase";
 import Green from "../GreenHand.png";
 export default class Resume extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: [],
+    };
+  }
+
+  async componentDidMount() {
+    const charities = [];
+    const charitiesSnapshot = await fstore.collection("charities").get();
+
+    charitiesSnapshot.docs.forEach((charity) => {
+      charities.push({
+        id: charity.id,
+        ...charity.data(),
+      });
+    });
+    this.setState({
+      data: charities,
+    });
+  }
+
   render() {
     return (
       <section id="resume">
-        <Charity />
-        <Charity />
-        <Charity />
+        {this.state.data.map((charity, index) => {
+          const { name, description, location, website, url } = charity;
+          return (
+            <Charity
+              name={name}
+              description={description}
+              location={location}
+              website={website}
+              url={url}
+            />
+          );
+        })}
       </section>
     );
   }
@@ -14,24 +46,32 @@ export default class Resume extends Component {
 
 class Charity extends Component {
   render() {
+    const { name, description, location, website, url } = this.props;
     return (
       <div>
         <div className="row education">
           <div className="three columns header-col">
             <h1>
-              <span>Charity Name</span>
+              <span style={{ color: "black" }}>{name}</span>
             </h1>
             <br></br>
-            <img src={Green} width="130px"></img>
+            <img src={url} width="130px"></img>
           </div>
 
           <div className="nine columns main-col">
             <div className="row item">
               <div className="twelve columns">
-                <h3>Charity Name</h3>
-                <p className="info">City : Bangalore</p>
+                <p>{description}</p>
+                <p className="info">{location}</p>
               </div>
-              <button> Goto charity website </button>
+              <button
+                onClick={() => {
+                  window.open(website);
+                }}
+              >
+                {" "}
+                Goto charity website{" "}
+              </button>
             </div>
           </div>
         </div>
