@@ -1,11 +1,9 @@
-import React from 'react'
-import { Button } from 'reactstrap'
+import React from 'react';
 
 
 function Header() {
     return (
         <div>
-            <Button />
             <h1>Header on top</h1>
         </div>
     )
