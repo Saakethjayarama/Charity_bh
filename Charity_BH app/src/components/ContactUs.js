@@ -9,6 +9,7 @@ export default class ContactUs extends Component {
       location: "",
       email: "",
       description: "",
+      website: "",
       logo: "",
       status: "",
     };
@@ -34,7 +35,7 @@ export default class ContactUs extends Component {
 
     const id = fstore.collection("charities").doc().id;
 
-    const { name, location, email, description } = this.state;
+    const { name, location, email, description, website } = this.state;
     fstore
       .collection("charities")
       .doc()
@@ -43,6 +44,7 @@ export default class ContactUs extends Component {
         location,
         email,
         description,
+        website,
         url,
       })
       .then(() => {
@@ -110,6 +112,17 @@ export default class ContactUs extends Component {
                   placeholder="Description "
                   name="description"
                   value={this.state.description}
+                  onChange={this.handleChange}
+                  required
+                />{" "}
+                <br />
+                <br />
+                <input
+                  type="text"
+                  id="lname"
+                  placeholder="Website "
+                  name="website"
+                  value={this.state.website}
                   onChange={this.handleChange}
                   required
                 />{" "}
