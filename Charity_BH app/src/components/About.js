@@ -20,13 +20,19 @@ export default class About extends Component {
               <div className="sameLine"></div>
               <h3 style={{ color: "#fff", fontFamily: "sans-serif " }}>
                 {" "}
-                A charity mediator that works on the graciousness of high
-                traffic website owners. CharityBH puts forward pitches for
+               We at CharityAF offer charity mediator service, that works on the graciousness of high
+                traffic website owners. CharityAF puts forward pitches for
                 donations to various charities and causes, on your website upon
                 consent, to make use of the web traffic for raising money.
                 Enroll today to help a cause.
+                <span>
+                On any high traffic website, CharityAF plugins provides a layer over the landing page, showcasing various charities for the valued customer to donate to. 
+                </span>
               </h3>
+              <br></br>
+              <h3>
 
+              </h3>
               <hr />
 
               {/* <ul className="social">

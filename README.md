@@ -24,3 +24,4 @@
 
 * Front-end: react.js, html, css
 * Back-end: firebase
+* Github for version control
