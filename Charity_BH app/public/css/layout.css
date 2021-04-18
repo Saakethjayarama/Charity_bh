@@ -33,7 +33,8 @@ header {
    height: 800px;
    min-height: 500px;
    width: 100%;
-   background: #161415 url(../images/header-background.jpg) no-repeat top center;
+   background-color: #0D0D0D;
+   /* background: #161415 url(../images/header-background.jpg) no-repeat top center; */
    background-size: cover !important;
 	-webkit-background-size: cover !important;
    text-align: center;
@@ -55,7 +56,16 @@ header .banner {
    padding-bottom: 30px;s
    text-align: center;
 }
+header .causeColor{
+   color: #C15164;
 
+}
+header .sameLine{
+   clear: both;
+   display: inline-block;
+   overflow: hidden;
+   white-space: nowrap;
+}
 header .banner-text { width: 100%; }
 header .banner-text h1 {
    font: 90px/1.1em 'opensans-bold', sans-serif;

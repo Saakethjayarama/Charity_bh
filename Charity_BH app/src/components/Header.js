@@ -9,23 +9,26 @@ export default class Header extends Component {
          <nav id="nav-wrap">
             <a className="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
           <a className="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+            
             <ul id="nav" className="nav">
-               <li className="current"><a className="smoothscroll" href="#home">Home</a></li>
+
+               <li className="current"><a className="current" href="#home">Charity BH</a></li>
+               <li className="smoothscroll"><a className="smoothscroll" href="#home">Home</a></li>
                <li><a className="smoothscroll" href="#about">About</a></li>
-             <li><a className="smoothscroll" href="#resume">Resume</a></li>
-               <li><a className="smoothscroll" href="#portfolio">Works</a></li>
-               <li><a className="smoothscroll" href="#testimonials">Testimonials</a></li>
-               <li><a className="smoothscroll" href="#contact">Contact</a></li>
+             <li><a className="smoothscroll" href="#resume">Charities</a></li>
+               {/* <li><a className="smoothscroll" href="#portfolio">Works</a></li>
+               <li><a className="smoothscroll" href="#testimonials">Testimonials</a></li> */}
+               <li><a className="smoothscroll" href="#contact">Enroll</a></li>
             </ul>
          </nav>
 
          <div className="row banner">
             <div className="banner-text">
-               <h1 className="responsive-headline">I am {resumeData.name}.</h1>
-               <h3 style={{color:'#fff', fontFamily:'sans-serif '}}>I am a {resumeData.role}.{resumeData.roleDescription}
+               <div className="responsive-headline sameLine"><h1>Help a  <div className="causeColor">cause.</div></h1></div>
+               <h3 style={{color:'#fff', fontFamily:'sans-serif '}}> Donate your web traffic for the good.
                </h3>
                <hr/>
-               <ul className="social">
+               {/* <ul className="social">
                   {
                     resumeData.socialLinks && resumeData.socialLinks.map(item =>{
                       return(
@@ -36,7 +39,7 @@ export default class Header extends Component {
                           }
                     )
                   }
-               </ul>
+               </ul> */}
             </div>
          </div>
 
