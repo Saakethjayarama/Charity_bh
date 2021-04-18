@@ -20,8 +20,24 @@
   * Choose to opt out of donation in which case they can click the X on the top right of the overlay and continue browsing in the website.
 
 
-## Technology Used
+## Technologies Used
 
 * Front-end: react.js, html, css
 * Back-end: firebase
 * Github for version control
+
+
+## How to use
+
+* Overlay: Inject the following script tag into the head section of your html file to apply the overlay of the desired charity.
+ ``` <script src="https://firebasestorage.googleapis.com/v0/b/charitybh-dc293.appspot.com/o/files%2Foverlay.js?alt=media&token=1a05a55b-9d65-4150-a8e6-db9747dbb191%22%3E</script> ```
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
