@@ -24,4 +24,3 @@
 
 * Front-end: react.js, html, css
 * Back-end: firebase
-* Hosted on Google Cloud
