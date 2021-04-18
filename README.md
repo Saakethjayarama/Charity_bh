@@ -1,4 +1,4 @@
-# Project Name ples
+# CharityAF (By sudo hackers)
 
 
 **Building awareness of charities in need of funds just got better!!! The project is a collection of a cool website that connects charities with popular websites willing to donate their web traffic for a good cause and a beautiful overlay template that redirects the user to the charity's website for donations.** 
