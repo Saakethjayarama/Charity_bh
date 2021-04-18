@@ -54,7 +54,6 @@ header .banner {
    margin: 0 auto;
    width: 85%;
    padding-bottom: 30px;s
-   text-align: center;
 }
 header .causeColor{
    color: #C15164;
@@ -65,6 +64,10 @@ header .handImg{
    object-fit: contain;
    margin-left: 800px;
    margin-top: -300px;
+}
+header .howItWorks{
+   color: rgb(rgb(15, 59, 255), rgb(54, 167, 54), blue);
+   margin-left: 15px !important;
 }
 header .sameLine{
   display: flex;

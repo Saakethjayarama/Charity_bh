@@ -3,6 +3,7 @@ import Hand from "../hand.jpg";
 export default class Header extends Component {
   render() {
     let resumeData = this.props.resumeData;
+    let url= "https://www.google.com";
     return (
       <React.Fragment>
         <header id="home">
@@ -42,11 +43,16 @@ export default class Header extends Component {
                   Enroll
                 </a>
               </li>
-              <li>
+               
+                <a className="howItWorks" href={url} >
+                  How it works?
+                </a>
+              
+              {/* <li>
                 <a className="smoothscroll" href="#admin">
                   Admin
                 </a>
-              </li>
+              </li> */}
             </ul>
           </nav>
 
@@ -54,16 +60,17 @@ export default class Header extends Component {
             <div className="banner-text ">
               <div className="responsive-headline ">
                 <h1>
-                  Help a <div className="causeColor">cause.</div>
+                  Help a <div className="causeColor">cause!</div>
                 </h1>
               </div>
               <div className="sameLine">
                 <img src={Hand} className="handImg" />
               </div>
-              <h3 style={{ color: "#fff", fontFamily: "sans-serif " }}>
+              <h2 style={{ color: "#fff", fontFamily: "sans-serif " }}>
                 {" "}
                 Donate your web traffic for the good.
-              </h3>
+                
+              </h2>
 
               <hr />
 
